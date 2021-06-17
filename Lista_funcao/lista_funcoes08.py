@@ -268,4 +268,3 @@ print(exponencial(2, 3))"""
 #alteração
 a = 1
 b = 2
-print(a+b)
