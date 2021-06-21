@@ -115,98 +115,92 @@ for num in range(51):
 print(soma)"""
 """11 - Faça um programa que leia um numero inteiro N e imprima todos os 
 números naturais de 0 até N em ordem crescente.
-numero = int(input("Digite um numero N: "))
-crescente = []
+"""
+"""numero: int = int(input("Digite um número: "))
 for num in range(0, numero+1, 1):
-    crescente.append(num)    
-print(crescente)"""
+    print(num)"""
 
 """ 12 - Faça um programa que leia um numero inteiro positivo N e im-
-prima todos os numeros naturais de 0 até N em ordem decrescente.
-numero = int(input("Digite um número N: "))
-decrescente = []
+prima todos os numeros naturais de 0 até N em ordem decrescente."""
+"""numero: int = int(input("Digite um número N: "))
 for num in range(numero,-1, -1):
-    decrescente.append(num)
-print(decrescente)"""
+    print(num)
+"""
 
 """ 13 e 14 - Faça um programa que leia um número inteiro positivo par N
-e imprima todos os números pares de 0 até N em ordem crescente e decrecente
-numero = int(input("Digite um numero N PAR: "))
-crescente = []
-decrescente = []
+e imprima todos os números pares de 0 até N em ordem crescente e decrecente"""
+"""numero: int = int(input("Digite um numero N PAR: "))
+print("Ordem crescente")
 for num in range(0, numero+1):
     if num % 2 == 0:
-        crescente.append(num)
-for num2 in range(numero, -1, -1):
-    if num2 % 2 == 0:
-        decrescente.append(num2)
-print(crescente)
-print(decrescente)"""
-
+        print(num)
+print("Ordem Decrecente")
+for num in range(numero, -1, -1):
+    if num % 2 == 0:
+        print(num)
+"""
 """ 15 e 16 - Faça um programa que leia um numero inteiro positivo im-
 par N e imprima todos os números impares de 1 até N em ordem crescente
-e decrescente
-numero = int(input("Digite um número N IMPAR: "))
-crescente = []
-decrescente = []
-for num1 in range(1, numero+1):
-    if num1 % 2 != 0:
-        crescente.append(num1)
-for num2 in range(numero, -1, -1):
-    if num2 % 2 != 0:
-        decrescente.append(num2)
-print(crescente)
-print(decrescente)"""
-
+e decrescente"""
+"""numero: int = int(input("Digite um número N IMPAR: "))
+for num in range(1, numero+1):
+    if num % 2 != 0:
+        print(num)
+for num in range(numero, -1, -1):
+    if num % 2 != 0:
+        print(num)"""
 """17 -  Faça um programa que leia um número inteiro positivo N e calcule
-a soma dos N primeiros números naturais.
-numero = int(input("Digite um número N: "))
+a soma dos N primeiros números naturais."""
+"""numero: int = int(input("Digite um número N: "))
 soma = 0
-for num in range(0, numero+1):
+for num in range(0, numero):
     soma += num
 print(soma)"""
 """ 18 - Escreva um algoritimo que leia certa quantidade de números e im-
 prima o maior deles e quantas vezes o maior número foi lido. A quantidade
-de números a serem lidos deve ser fornecida pelo usuário
-qtd = int(input("Digite a quantidade de numeros que devem ser lidos: "))
-lista = []
-for num in range(0, qtd):
-    numero = int(input(f"Digite um número {1+num}/{qtd}: "))
-    lista.append(numero)
-print(lista)
-print("O Maior número: ", max(lista))
-print("Ele repetiu: ", lista.count(max(lista)))"""
+de números a serem lidos deve ser fornecida pelo usuário"""
+"""qtd: int = int(input("Digite a quantidade de numeros que devem ser lidos: "))
+num: int = int(input("Digite numero: ")) 
+maior: int = num
+contador_maior: int = 0
+while qtd > 1:
+    qtd -= 1
+    num: int = int(input("Digite numero: "))
+    if num > maior:
+        maior = num
+        if maior == num:
+            contador_maior += 1
+print(maior, contador_maior)"""
 ''' 19 - Escreva um algoritimo que leia um número inteiro entre 100 e 999 e
-imprima na saída cada um dos algarismos que compôem o número
-numero = 0
-while numero == 0:
-    numero = int(input("Digite um numero entre 100 e 999: "))
+imprima na saída cada um dos algarismos que compôem o número'''
+'''numero: int = int(input("Digite um numero entre 100 e 999: "))
+while True:
     if numero >= 100 and numero <= 999:
-            u = numero // 1 % 10
-            d = numero // 10 % 10
-            c = numero // 100 % 10
-
-    else:
-        print("Número Invalido!")
-print(f"""Numero {numero}
-Unidade: {u}
-Dezena: {d}0
-Centena: {c}00""")'''
+        u: int = numero // 1 % 10
+        d: int = numero // 10 % 10        
+        c: int = numero // 100 % 10
+        print(f"""Numero {numero}
+        Unidade: {u}
+        Dezena: {d}0
+        Centena: {c}00""")
+        break
+    else: 
+        print("Numero invalido! ")
+        numero: int = int(input("Digite um numero entre 100 e 999: "))
+'''
 """ 20 - Ler uma sequêcia de números inteiros e determinar se eles são pares
 ou não. Deverá ser informado o número de dados lidos e número de valores pares.
-O processo termina quando for digitado o número 1000.
-
-num = cont = 0
-num = int(input("Digite um numero [1000 para parar]: "))
-par = []
+O processo termina quando for digitado o número 1000."""
+"""contador = contador_pares = 0
+num: int = int(input("Digite um numero [1000 para parar]: "))
 while num != 1000:
-    cont += 1
-    num = int(input("Digite um numero [1000 para parar]: "))
+    contador += 1
     if num % 2 == 0:
-        par.append(num)
-print(f"Vc digitou {cont} numeros, {len(par)} são pares")"""
-
-
+        contador_pares += 1
+        print(f"Vc digitou {contador_pares} numeros pares, {num} é par")
+    else:
+        print(f"{num} é impar, vc digitou {contador} numeros")
+    num: int = int(input("Digite um numero [1000 para parar]: "))"""
 """21 - Faça um programa que receba dois números. Calcule e mostre:
 * a Soma dos números pares desse intervalo de números, incluindo os numeros
 digitados; 
