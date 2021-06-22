@@ -265,6 +265,14 @@ print(exponencial(2, 3))"""
 """
 19 - Faça uma função que retorne o maior fator primo de um numero.
 """
-#alteração
-a = 1
-b = 2
+#Função por recursão
+def enviar_cartao_postal(amount: int) -> None:
+    print(f'Cartão postal {amount} enviado!')
+    if amount == 1:
+        print(f"Todos os cartões postais enviados")
+        return amount
+    else:
+        #amountRemaining = amount - 1
+        print(f"Chamando a função novamente")
+        return enviar_cartao_postal(amount - 1)
+enviar_cartao_postal(3)

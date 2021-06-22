@@ -204,11 +204,11 @@ while num != 1000:
 """21 - Faça um programa que receba dois números. Calcule e mostre:
 * a Soma dos números pares desse intervalo de números, incluindo os numeros
 digitados; 
-* a multiplicação dos números impares desse intervalo, incluindo os digitados;
-num1 = int(input("Digite um numero: "))
-num2 = int(input("Digite outro numero: "))
-soma = 0
-multi = 1
+* a multiplicação dos números impares desse intervalo, incluindo os digitados;"""
+"""num1: int = int(input("Digite um numero: "))
+num2: int = int(input("Digite outro numero: "))
+soma: int = 0
+multi: int = 1
 if num1 < num2:
     for num in range(num1, num2+1):
         if num % 2 == 0:
@@ -223,65 +223,68 @@ else:
             multi *= num 
 print(f"Soma: {soma}")
 print(f"Multiplicação: {multi}")"""
-"""22 -  Escreva um programa completo que permita qualquer aluno introdudir,
+"""22 - Escreva um programa completo que permita qualquer aluno introdudir,
 pelo teclado uma seguencia arbritrária de notas (válidas no intervalo de 10 a 20) e
 que mostre na tela, como resultado, correspondente média aritmética. o número de
 notas com que o aluno pretenda efetuar o calculo não será fornecido ao programa, o 
 qual terminara quando for introduzido um valor que não seja válido como nota de
-aprovação.
+aprovação."""
 # Entrada sequecia de notas (10 a 20)
-nota = int(input("Digite uma nota: "))
-count = 0
-soma = 0
+"""nota: int = int(input("Digite uma nota: "))
+count: int = 0
+soma: int = 0
 while nota >= 10 and nota <= 20:
     count += 1
     soma += nota
-    nota = int(input("Digite outra nota: "))
-print(f"Media: {soma / count}")
-"""
-"""23 - Faça um algoritmo que leia um número positivo e imprima seus divisores. 
-numero = int(input("Digite um numero: "))
-lista = []
-if numero > 0:
-    for num in range(1, numero, 1):
-        if numero % num == 0: 
-            lista.append(num)
-else: 
-    print("Numero < 0")
-print(f"Divisores de {numero} == {lista}")
-"""
+    nota: int = int(input("Digite outra nota: "))
+print(f"Media: {soma / count}")"""
+"""23 - Faça um algoritmo que leia um número positivo e imprima seus divisores. """
+"""while True:
+    numero: int = int(input("Digite um numero: "))
+    if numero > 0:
+        for num in range(1, numero, 1):
+            if numero % num == 0: 
+                print(f"{num} é divisor == {numero}")
+    else: 
+        print("Numero < 0")
+        break"""
 """24 - Escreva um programa que leia um número inteiro e calcule a soma de todos
 de todos os divisoes desse numero, com execeção dele próprio Ex: a soma dos divisores
-do número 66 é 1 + 2 + 3 + 6 + 22 + 33 = 78
-numero = int(input("Digite um numero: "))
-lista = []
-if numero > 0:
-    for num in range(1, numero-1, 1):
-        if numero % num == 0: 
-            lista.append(num)
-else: 
-    print("Numero < 0")
-print(f"A soma dos divisores de {numero} == {lista, numero} == {sum(lista)}")"""
+do número 66 é 1 + 2 + 3 + 6 + 22 + 33 = 78"""
+"""numero: int = int(input("Digite um numero: "))
+soma: int = 0
+while numero > 0:
+    for num in range(1, numero, 1):
+        if numero % num == 0:
+            soma += num 
+            print(f"{num} += {soma}")
+    print(f"A soma dos divisores do número {numero} é {soma}")
+    numero: int = int(input("Digite um numero: "))"""
 
-"""25 - Faça um programa que some todos os números abaixo de 1000 que são multiplos de 3 ou 5
-lista = []
+
+"""25 - Faça um programa que some todos os números abaixo de 1000 que são multiplos de 3 ou 5"""
+"""soma: int = 0
 for i in range(1, 1000):
     if i % 3 == 0 or i % 5 == 0:
-        lista.append(i)
-print(sum(lista))
-print(lista)"""
+        soma += i
+print(soma)"""
 """26 - Faça um algoritimo que encontre o primeiro multiplo
 11, 13 ou 17 após um numero de dados""" 
 """numero: int = int(input("Digite um numero: "))
-lista = []
-for num in range(numero, numero + 12):
-    if num % 11 == 0 or num % 13 == 0 or num % 17 == 0:
-        lista.append(num)
-print(lista)
-"""
+mult_11 = mult_13 = mult_17 = 0
+for num in range(11, numero+4):
+    if num % 11 == 0:
+        mult_11 = num
+    if num % 13 == 0:
+        mult_13 = num
+    if num % 17 == 0:
+        mult_17 = num
+print(mult_11, mult_13, mult_17)"""
+
 """27 - Em Matemática, o numero harmonico designado por H(n) 
 define-se como sendo a soma da série harmónica: 
 H(n) = 1 + 1/2 + 1/3 + 1/4 +...+ 1/n
 Faça um programa que leia um valor n inteiro e positivo e apre-
 sente o valor de H(n).
 """
+
